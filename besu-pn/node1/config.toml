@@ -1,8 +1,0 @@
-data-path="/home/catpuccino/besu-pn/node1/data"
-node-private-key-file="/home/catpuccino/besu-pn/node1/key"
-genesis-file="/home/catpuccino/besu-pn/genesis/genesis.json"
-p2p-port=30303
-rpc-http-enabled=true
-rpc-http-port=8545
-rpc-http-api=["ETH","NET","IBFT"]
-host-allowlist=["*"]
