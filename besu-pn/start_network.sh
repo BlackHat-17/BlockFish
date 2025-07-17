@@ -17,14 +17,6 @@ if [ -f .env ]; then
   set +o allexport
 fi
 
-# Set default values (if not set in .env)
-BESU_BIN=${BESU_BIN:-besu}
-NUM_NODES=${NUM_NODES:-4}
-NODE_PREFIX=${NODE_PREFIX:-node}
-GENESIS_FILE=${GENESIS_FILE:-genesis/genesis.json}
-START_PORT_P2P=${START_PORT_P2P:-30303}
-START_PORT_RPC=${START_PORT_RPC:-8545}
-
 # Check if besu is installed
 if ! command -v "$BESU_BIN" &> /dev/null; then
   echo "❌ Error: '$BESU_BIN' not found. Please install Besu or set BESU_BIN in your .env."
