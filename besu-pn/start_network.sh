@@ -38,7 +38,7 @@ for i in $(seq 1 "$NUM_NODES"); do
   P2P_PORT=$((START_PORT_P2P + i - 1))
   RPC_PORT=$((START_PORT_RPC + i - 1))
 
-  echo "🚀 Starting $NODE_NAME (P2P: $P2P_PORT, RPC: $RPC_PORT)..."
+  echo "Starting $NODE_NAME (P2P: $P2P_PORT, RPC: $RPC_PORT)..."
 
   gnome-terminal --title="$NODE_NAME" -- bash -c "
     $BESU_BIN \
@@ -49,7 +49,7 @@ for i in $(seq 1 "$NUM_NODES"); do
       --rpc-http-port=$RPC_PORT \
       --logging=INFO \
       2>&1 | tee \"$NODE_DIR/${NODE_NAME}.log\";
-    echo '⛔ $NODE_NAME stopped. Press Enter to close window.'; read"
+    echo '$NODE_NAME stopped. Press Enter to close window.'; read"
   sleep 0.3
 done
 
