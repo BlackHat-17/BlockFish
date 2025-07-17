@@ -11,7 +11,7 @@ fi
 # Default to first node RPC port
 RPC_PORT=${START_PORT_RPC:-8545}
 
-echo "🔍 Checking network on http://localhost:$RPC_PORT"
+echo "Checking network on http://localhost:$RPC_PORT"
 
 # Get peer count
 PEERS_HEX=$(curl -s -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' \
@@ -25,6 +25,6 @@ BLOCK_HEX=$(curl -s -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber",
 PEERS_DEC=$((PEERS_HEX))
 BLOCK_DEC=$((BLOCK_HEX))
 
-echo "🌐 Peers: $PEERS_DEC"
-echo "⛓️  Latest Block: $BLOCK_DEC"
+echo "Peers: $PEERS_DEC"
+echo "⛓Latest Block: $BLOCK_DEC"
 
