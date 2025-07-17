@@ -1,12 +1,6 @@
 #!/bin/bash
 set -e
 
-# ------------------------------
-# Generalized Besu Network Starter
-# ------------------------------
-
-# Get the directory where this script is located
-BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$BASE_DIR"
 
 # Load environment variables from .env if available
