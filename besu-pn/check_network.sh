@@ -8,9 +8,6 @@ if [ -f .env ]; then
   set +o allexport
 fi
 
-# Default to first node RPC port
-RPC_PORT=${START_PORT_RPC:-8545}
-
 echo "Checking network on http://localhost:$RPC_PORT"
 
 # Get peer count
