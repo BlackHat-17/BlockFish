@@ -1,6 +1,6 @@
-data-path="/home/catpuccino/besu-pn/node2/data"
-node-private-key-file="/home/catpuccino/besu-pn/node2/key"
-genesis-file="/home/catpuccino/besu-pn/genesis/genesis.json"
+data-path="data"
+node-private-key-file="key"
+genesis-file="../../genesis/genesis.json"
 p2p-port=30304
 rpc-http-enabled=true
 rpc-http-port=8546
