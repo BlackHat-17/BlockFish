@@ -39,5 +39,5 @@ for i in $(seq 1 "$NUM_NODES"); do
   sleep 0.3
 done
 
-echo "✅ All nodes started. View logs in each terminal or in node logs."
+echo "All nodes started. View logs in each terminal or in node logs."
 
