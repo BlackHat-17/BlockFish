@@ -17,7 +17,7 @@ PEERS_HEX=$(curl -s -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","p
 # Get block number
 BLOCK_HEX=$(curl -s -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' \
   -H "Content-Type: application/json" http://localhost:$RPC_PORT | jq -r .result)
-
+#When sending JSON data, explicitly specify the Content-Type header as application/json using the -H flag. The JSON payload is provided with the -d flag
 # Convert hex to decimal
 PEERS_DEC=$((PEERS_HEX))
 BLOCK_DEC=$((BLOCK_HEX))
