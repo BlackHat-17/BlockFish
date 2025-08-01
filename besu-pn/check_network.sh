@@ -13,7 +13,7 @@ echo "Checking network on http://localhost:$RPC_PORT"
 # Get peer count
 PEERS_HEX=$(curl -s -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":1}' \
   -H "Content-Type: application/json" http://localhost:$RPC_PORT | jq -r .result)
-
+#The curl command in Linux is a command-line tool used for transferring data to or from a server using various protocols
 # Get block number
 BLOCK_HEX=$(curl -s -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' \
   -H "Content-Type: application/json" http://localhost:$RPC_PORT | jq -r .result)
